@@ -1,0 +1,66 @@
+/* Global styles for the list */
+.list ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around; /* Ensure spacing between items */
+  background-color: #333; /* Background color for navbar */
+}
+
+.list ul li {
+  padding: 10px 20px; /* Padding around links */
+}
+
+.list ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.list ul li a:hover {
+  text-decoration: underline;
+  color: #ddd; /* Color when hovered */
+}
+
+/* Mobile First Approach */
+@media (max-width: 768px) {
+  .list ul {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center;
+    background-color: #444; /* Darker background for mobile */
+  }
+
+  .list ul li {
+    padding: 15px 0; /* More space between links on mobile */
+  }
+
+  .list ul li a {
+    font-size: 20px; /* Larger font size for mobile */
+  }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .list ul {
+    flex-direction: row; /* Horizontal layout on tablets */
+    justify-content: space-evenly; /* Even spacing on tablets */
+    align-items: center;
+  }
+
+  .list ul li a {
+    font-size: 18px; /* Adjust font size for tablet */
+  }
+}
+
+/* Desktop view */
+@media (min-width: 1024px) {
+  .list ul {
+    justify-content: flex-start; /* More space for desktop */
+    align-items: center;
+  }
+
+  .list ul li a {
+    font-size: 16px; /* Smaller font for desktop */
+  }
+}

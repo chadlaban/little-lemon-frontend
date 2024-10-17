@@ -1,8 +1,12 @@
+import Header from "./Header";
+import Footer from "./Footer";
+
 function Main() {
   return (
-    <div className="main-grid">
-      <h1>This is the Main</h1>{" "}
-    </div>
+    <>
+      <Header />
+      <Footer />
+    </>
   );
 }
 

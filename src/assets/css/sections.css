@@ -2,6 +2,32 @@
   background-color: #495e57;
 }
 
+.primary .custom-form {
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.primary h1 {
+  color: #fff !important;
+}
+
+.primary h2 {
+  color: #fff !important;
+}
+
+.primary h3 {
+  color: #fff !important;
+}
+
+.primary p {
+  color: #fff !important;
+}
+
+.primary .input-label {
+  color: #fff !important;
+}
+
 .main-grid-col {
   display: grid;
   grid-template-columns: 1fr 1fr;

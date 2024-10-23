@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import ReservationSlots from "../components/ReservationSlots";
 
 function Reservations() {
@@ -40,10 +41,18 @@ function Reservations() {
     setSelectedSlot("");
   };
 
+  const location = useLocation();
+  const { pathname } = location;
+
   return (
-    <div className="main-grid">
+    <div
+      className={`main-grid ${pathname === "/reservations" ? "primary" : ""}`}
+    >
       <h1>This is the Reservations</h1>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        className={`${pathname === "/reservations" ? "custom-form" : ""}`}
+      >
         <label htmlFor="date">Choose date</label>
         <input
           type="date"

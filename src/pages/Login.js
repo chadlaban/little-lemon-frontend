@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "../assets/css/login.css";
@@ -20,12 +21,27 @@ const Login = () => {
     },
   });
 
+  const location = useLocation();
+  const { pathname } = location;
+
   return (
-    <div className="login-form-container">
+    <div
+      className={`login-form-container ${
+        pathname === "/login" ? "primary" : ""
+      }`}
+    >
       <h2>Login</h2>
-      <form onSubmit={formik.handleSubmit}>
+      <form
+        onSubmit={formik.handleSubmit}
+        className={`${pathname === "/login" ? "primary" : ""}`}
+      >
         <div className="form-group">
-          <label htmlFor="email">Email</label>
+          <label
+            htmlFor="email"
+            className={`${pathname === "/login" ? "input-label" : ""}`}
+          >
+            Email
+          </label>
           <input
             id="email"
             name="email"
@@ -40,7 +56,12 @@ const Login = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="password">Password</label>
+          <label
+            htmlFor="password"
+            className={`${pathname === "/login" ? "input-label" : ""}`}
+          >
+            Password
+          </label>
           <input
             id="password"
             name="password"

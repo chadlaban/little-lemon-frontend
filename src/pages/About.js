@@ -1,10 +1,16 @@
+import { useLocation } from "react-router-dom";
 import photo1 from "../assets/images/restaurant chef B.jpg";
 import photo2 from "../assets/images/Mario and Adrian b.jpg";
 
 function About() {
+  const location = useLocation();
+  const { pathname } = location;
+
   return (
-    <article className="main-grid-about">
-      <div style={{ color: "#333333" }}>
+    <article
+      className={`main-grid-about ${pathname === "/about" ? "primary" : ""}`}
+    >
+      <div>
         <h1>Little Lemon</h1>
         <h3>Chicago</h3>
         <article>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import photo1 from "../../assets/images/greek salad.jpg";
 import photo2 from "../../assets/images/icons/bruchetta.svg";
 import photo3 from "../../assets/images/lemon dessert.jpg";
@@ -9,7 +10,9 @@ function SpecialMenuSection() {
       <div>
         <h2>Specials</h2>
 
-        <button>Online Menu</button>
+        <Link to="/orderonline">
+          <button>Online Menu</button>
+        </Link>
       </div>
       <div className="items">
         <article className="item-body">
@@ -28,10 +31,10 @@ function SpecialMenuSection() {
                 rosemary croutons.
               </p>
             </article>
-            <a src="#">
-              Order a delivery{" "}
+            <Link to="/orderonline">
+              Order a delivery
               <img className="icon" src={scooterIcon} alt="scooter_icon" />
-            </a>
+            </Link>
           </div>
         </article>
         <article className="item-body">
@@ -49,10 +52,10 @@ function SpecialMenuSection() {
                 with garlic and seasoned with salt and olive oil.{" "}
               </p>
             </article>
-            <a src="#">
-              Order a delivery{" "}
+            <Link to="/orderonline">
+              Order a delivery
               <img className="icon" src={scooterIcon} alt="scooter_icon" />
-            </a>
+            </Link>
           </div>
         </article>
         <article className="item-body">
@@ -71,10 +74,10 @@ function SpecialMenuSection() {
                 imagined.
               </p>
             </article>
-            <a src="#">
-              Order a delivery{" "}
+            <Link to="/orderonline">
+              Order a delivery
               <img className="icon" src={scooterIcon} alt="scooter_icon" />
-            </a>
+            </Link>
           </div>
         </article>
       </div>

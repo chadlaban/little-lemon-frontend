@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import reservationImg from "../../assets/images/restauranfood.jpg";
 
 function ReservationSection() {
@@ -15,7 +16,9 @@ function ReservationSection() {
           </p>
         </article>
         <div className="btn-container">
-          <button>Reserve a Table</button>
+          <Link to="/reservations">
+            <button>Reserve a Table</button>
+          </Link>
         </div>
       </div>
       <div className="img-container">

@@ -1,7 +1,9 @@
+import Error from "../components/status/404";
+
 function OrderOnline() {
   return (
     <div className="main-grid">
-      <h1>This is the OrderOnline</h1>
+      <Error msg="Oh no, a 404 page! the ordering system is still under construction, sorry for the inconvenience..." />
     </div>
   );
 }
